@@ -1,0 +1,23 @@
+name: 'pr-review-bot-nodejs'
+
+services:
+  bot-app:
+    container_name: bot-app-container
+    hostname: bot-app-server
+    image: bot/app-server:dev
+    build:
+      context: .
+      dockerfile: ./infra/docker/node/Dockerfile
+      cache_from:
+        - bot/app-server:cache
+    tty: true
+    volumes:
+      - ./app:/var/www/app:cached
+    ports:
+      - '13111:3000'
+    networks:
+      - bot-app
+
+networks:
+  bot-app:
+    driver: bridge

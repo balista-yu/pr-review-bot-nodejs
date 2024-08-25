@@ -1,0 +1,34 @@
+{
+  "name": "pr-review-bot-nodejs",
+  "version": "1.0.0",
+  "description": "Github Pull Request Review Bot",
+  "author": "balista-yu",
+  "license": "MIT",
+  "homepage": "https://github.com/balista-yu/pr-review-bot-nodejs",
+  "keywords": [
+    "probot",
+    "github",
+    "probot-app"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "npm run build && probot run ./lib/index.js",
+    "test": "vitest"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.17.1",
+    "node-fetch": "^3.3.2",
+    "probot": "^13.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "nock": "^14.0.0-beta.5",
+    "smee-client": "^2.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.3.1"
+  },
+  "engines": {
+    "node": ">= 18"
+  },
+  "type": "module"
+}

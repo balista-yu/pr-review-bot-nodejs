@@ -1,0 +1,16 @@
+{
+  "action": "opened",
+  "pull_request": {
+    "url": "https://api.github.com/repos/test-owner/test-repo/pulls/1",
+    "number": 1
+  },
+  "repository": {
+    "name": "test-repo",
+    "owner": {
+      "login": "test-owner"
+    }
+  },
+  "installation": {
+    "id": 1
+  }
+}
